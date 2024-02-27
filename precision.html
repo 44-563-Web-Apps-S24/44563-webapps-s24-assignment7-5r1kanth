@@ -17,7 +17,7 @@
     <h2>Srikanth Pamulapati - Speed Check</h2>
     <div id="target">Your time: </div>
     <div id="counter">Count: </div>
-    <button>Start Timer</button>
+    <button onclick="startTime()">Start Timer</button>
     <button onclick="recordTime()">Stop Timer</button>
   </div>
 
@@ -28,6 +28,22 @@
       stopTime = Date.now();
       console.log(stopTime);
     }
+
+    function startTime() {
+            for (let i = 0; i < 5; i++) {
+                setTimeout(() => {
+                    document.getElementById('counter').innerHTML = i;
+                }, (4 - i) * 1000);
+            }
+            setTimeout(() => {
+                if (!stopTime) {
+                    document.getElementById('target').innerHTML = "Too Slow";
+                } else {
+                    let timeElapsed = stopTime - (Date.now() - 4000);
+                    document.getElementById('target').innerHTML = "Time was " +timeElapsed+ " milliseconds";
+                }
+            }, 4000);
+        }
   </script>
 </body>
 
