@@ -15,7 +15,7 @@ h1{
     margin: 20px 0;
 }
 div{
-    margin: 10px 0;
+    margin: 1px 0;
 }
 .container{
     width: 100%;
@@ -28,14 +28,26 @@ div{
     flex-direction: row;
     align-items: center; */
 }
+.help-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
 .game-container{
     width: 90%;
 }
 .gameboard{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+
+    /* justify-content: space-evenly; */
+}
+.row{
+margin: -2px;
+    display: flex;
+    flex-direction: row;
 }
 .col{
     margin: 4px;
